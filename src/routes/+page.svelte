@@ -97,7 +97,7 @@
 			});
 
 			if (data.tab_title) {
-				chatStore.updateTabTitle(activeTab?.id ?? 'default', data.tab_title);
+				chatStore.updateTabTitle($chatStore.activeTabId, data.tab_title);
 			}
 		} catch (error) {
 			console.error('Error:', error);
@@ -135,8 +135,11 @@
 		icon: iconMap[card.iconName as keyof typeof iconMap]
 	}));
 
-	function handlePromptSelect(prompt: string) {
+	function handlePromptSelect(prompt: string, submitImmediately = false) {
 		chatInput = prompt;
+		if (submitImmediately) {
+			handleSubmit();
+		}
 	}
 
 	// Fetch and select 4 random prompts from engagingPrompts.txt
@@ -248,7 +251,7 @@
 
 	<!-- Mobile Bottom Navigation -->
 	<div
-		class="md:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-around items-center p-3 z-50"
+		class="md:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-around items-center p-3 z-20"
 	>
 		<button class="p-2 hover:bg-muted rounded-lg">
 			<MessageSquare class="w-6 h-6" />

@@ -55,7 +55,7 @@
 <Sidebar.Root
 	class={cn(
 		"bg-background text-foreground w-[280px] flex flex-col border-r border-sidebar-border",
-		"fixed md:static z-50 transition-transform duration-300",
+		"fixed md:static z-40 transition-transform duration-300",
 		"h-screen overflow-hidden",
 		$isMobileSidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
 	)}

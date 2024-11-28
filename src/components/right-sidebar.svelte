@@ -2,15 +2,15 @@
 	import { Moon, Sun, MessageCircleQuestion, Eye } from 'lucide-svelte';
 	import { toggleMode } from 'mode-watcher';
 
-	// Remove the manual theme state management
-	// let theme = $state('dark');
-	// function toggleTheme() { ... }
+	function openHelp() {
+		window.open('https://huggingface.co/thirdeyeai', '_blank');
+	}
 </script>
 
 <div class="w-[72px] border-l border-sidebar-border flex flex-col h-full">
 	<!-- Only show these buttons on desktop since we have mobile bottom nav -->
 	<div class="hidden md:flex flex-col items-center gap-4 p-4">
-		<button class="p-2 rounded-lg hover:bg-sidebar-accent text-sidebar-foreground/70">
+		<button class="p-2 rounded-lg hover:bg-sidebar-accent text-sidebar-foreground/70" onclick={openHelp}>
 			<MessageCircleQuestion class="w-6 h-6" />
 		</button>
 

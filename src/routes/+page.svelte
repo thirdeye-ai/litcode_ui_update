@@ -92,7 +92,7 @@
 			chatStore.addMessage({
 				sender: 'AI',
 				text: data.response || 'Sorry, there was an error processing your request.',
-				isCode: false,
+				isCode: data.isCode || false,
 				timestamp: new Date()
 			});
 
@@ -177,19 +177,19 @@
 		<!-- Chat Area with Centered Logo -->
 		<div class="flex-1 overflow-hidden flex flex-col items-center w-full">
 			<div
-				class="h-full w-full max-w-[1200px] px-6 md:px-8 pb-[100px] md:pb-24 overflow-y-auto
+				class="h-full w-full max-w-[800px] px-6 md:px-8 pb-[100px] md:pb-24 overflow-y-auto
 				scrollbar-thin scrollbar-thumb-scrollbar-thumb scrollbar-track-scrollbar-track
 				hover:scrollbar-thumb-muted"
 			>
-				{#if !activeTab || activeTab.messages.length === 0}
-					<!-- Ensure full height and proper centering -->
+				{#if !activeTab}
+					<!-- Show home page only when there's no active tab -->
 					<div class="h-full w-full flex items-center justify-center">
 						<div class="flex flex-col items-center">
 							<img
-								src="/litcode_main_logo.png"
-								alt="LitCode"
-								class="h-24 md:h-36 mb-8 object-contain dark:hidden"
-							/>
+									src="/litcode_main_logo.png"
+									alt="LitCode"
+									class="h-24 md:h-36 mb-8 object-contain dark:hidden"
+								/>
 							<img
 								src="/litcode_main_invert_logo.png"
 								alt="LitCode"
@@ -197,7 +197,7 @@
 							/>
 
 							<!-- Prompt Cards -->
-							<div class="w-full grid grid-cols-2 gap-4">
+							<div class="w-full grid grid-cols-1 xs:grid-cols-2 gap-2 md:gap-4 px-2 md:px-0">
 								{#each randomPrompts as prompt}
 									<PromptCard
 										title={prompt}
@@ -213,24 +213,20 @@
 				{:else}
 					<!-- Chat messages -->
 					<div class="space-y-4 py-4">
-						{#each activeTab?.messages ?? [] as message}
+						{#each activeTab.messages as message}
 							<div class="flex gap-3 {message.sender === 'User' ? 'justify-end' : 'justify-start'}">
 								<div
 									class="max-w-[80%] {message.sender === 'User'
 										? 'bg-primary text-primary-foreground'
 										: 'bg-muted'} rounded-lg px-4 py-2"
 								>
-									{#if message.isCode}
-										<MarkdownRenderer content={message.text} />
-									{:else}
-										<p class="whitespace-pre-wrap">{message.text}</p>
-									{/if}
+									<MarkdownRenderer content={message.text} />
 								</div>
 							</div>
 						{/each}
 
 						<!-- Show typing indicator immediately after user's message while loading -->
-						{#if isLoading && activeTab?.messages?.length > 0 && activeTab.messages[activeTab.messages.length - 1].sender === 'User'}
+						{#if isLoading && activeTab.messages.length > 0 && activeTab.messages[activeTab.messages.length - 1].sender === 'User'}
 							<div class="flex gap-3 justify-start">
 								<TypingIndicator />
 							</div>

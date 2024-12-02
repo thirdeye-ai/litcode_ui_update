@@ -55,7 +55,7 @@
 <Sidebar.Root
 	class={cn(
 		"bg-background text-foreground w-[280px] flex flex-col border-r border-sidebar-border",
-		"fixed md:static z-40 transition-transform duration-300",
+		"fixed md:static z-50",
 		"h-screen overflow-hidden",
 		$isMobileSidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
 	)}
@@ -104,6 +104,7 @@
 
 		<button
 			class="w-full flex items-center gap-3 px-3 py-2 mt-4 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90"
+			onclick={createNewChat}
 		>
 			<Plus class="w-5 h-5" />
 			<span>New Chat</span>

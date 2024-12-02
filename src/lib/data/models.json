@@ -1,0 +1,26 @@
+{
+    "models": [
+      { "value": "marco-o1", "label": "marco-o1 (chain of thought reasoning chat)", "enabled": true },
+      { "value": "litchat superbasic", "label": "llama3.2 (fastest general chat)", "enabled": true },
+      { "value": "litchat basic", "label": "llama3.1 (general chat)", "enabled": true },
+      { "value": "basic", "label": "Mistral (basic coding)", "enabled": true },
+      { "value": "qwen2-math", "label": "Qwen2 Math (fast math)", "enabled": true },
+      { "value": "advanced", "label": "DeepSeek Coder v2 (premium coding)", "enabled": true },
+      { "value": "litchat premium", "label": "Qwen 2.5 14B (premium chat)", "enabled": true },
+      { "value": "nemotron-mini", "label": "NVIDIA Nemotron 4B (fast)", "enabled": true },
+      { "value": "gemma", "label": "Google's Gemma (fast)", "enabled": true },
+      { "value": "smollm2", "label": "SmolLM 2 (fast)", "enabled": true },
+      { "value": "qwen2.5-coder", "label": "Qwen 2.5 Coder", "enabled": true },
+      { "value": "qwen2.5-coder:3b", "label": "Qwen 2.5 Coder 3B (fast)", "enabled": true },
+      { "value": "qwen2.5-coder-uncensored", "label": "Qwen 2.5 Coder Uncensored", "enabled": true },
+      { "value": "phi3.5", "label": "Phi-3.5 (fast coding)", "enabled": true },
+      { "value": "solar-pro", "label": "Solar Pro (slowest)", "enabled": true },
+      { "value": "llama3.1-abliterated", "label": "LLaMA 3.1 Abliterated 8B", "enabled": true },
+      { "value": "bespoke-mini", "label": "Bespoke Mini", "enabled": true },
+      { "value": "wizard7", "label": "Wizard Vicuna 7B", "enabled": true },
+      { "value": "wizard13", "label": "Wizard Vicuna 13B", "enabled": true },
+      { "value": "hermes3", "label": "Hermes 3 8B (general chat)", "enabled": true },
+      { "value": "command-r", "label": "Command-R (executive, slowest)", "enabled": true }
+    ]
+  }
+  

@@ -41,8 +41,8 @@
     }
 </script>
 
-<div class="fixed bottom-[4.5rem] md:bottom-0 left-0 right-0 w-full p-2 md:p-4 border-t bg-background flex justify-center z-30">
-    <div class="w-full max-w-[1200px] px-6 md:px-8">
+<div class="fixed bottom-[4.5rem] md:bottom-0 left-0 right-0 w-full p-2 md:p-4 border-t bg-background flex justify-center z-20">
+    <div class="w-full max-w-[800px] md:ml-[280px] px-6 md:px-8">
         {#if selectedFiles.length > 0}
             <div class="mb-2 space-y-2">
                 {#each selectedFiles as file, index}

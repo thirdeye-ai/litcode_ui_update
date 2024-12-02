@@ -1,24 +1,7 @@
 <script lang="ts">
 	import * as Select from '$lib/components/ui/select';
 	import { chatStore } from '$lib/stores/chat';
-
-	const models = [
-		{ value: 'marco-o1', label: 'marco-o1 (chain of thought reasoning chat)', enabled: true },
-		{ value: 'litchat superbasic', label: 'llama3.2 (fastest general chat)', enabled: true },
-		{ value: 'litchat basic', label: 'llama3.1 (general chat)', enabled: true },
-		{ value: 'basic', label: 'mixtral (basic coding)', enabled: true },
-		{ value: 'qwen2-math', label: 'Qwen2 Math (fast math)', enabled: true },
-		{ value: 'advanced', label: 'deepseek-coderv2 (premium coding)', enabled: true },
-		{ value: 'litchat premium', label: 'LitChat Premium (general chat)', enabled: true },
-		{ value: 'nemotron-mini', label: "NVIDIA's nemotron-mini (fast)", enabled: true },
-		{ value: 'gemma', label: "Google's gemma (fast)", enabled: true },
-		{ value: 'phi3.5', label: 'phi3.5 (fast coding)', enabled: true },
-		{ value: 'hermes3', label: 'Hermes3 (general chat)', enabled: true },
-		{ value: 'solar-pro', label: 'Advanced Solar-Pro (slowest)', enabled: true },
-		{ value: 'wizard7', label: 'wizard-vicuna-uncensored 7b', enabled: true },
-		{ value: 'wizard13', label: 'wizard-vicuna-uncensored 13b', enabled: true },
-		{ value: 'command-r', label: 'command-r (executive, slowest)', enabled: true },
-	];
+	import { models } from '$lib/data/models.json';
 
 	// Subscribe to the store value
 	let selectedModel: string;

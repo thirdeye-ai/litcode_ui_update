@@ -19,7 +19,7 @@
 
 	const menuItems = [
 		{ icon: MessageSquare, label: 'Chat-Bot (General)', active: true, href: '#' },
-		{ icon: UsersRound, label: 'Community', href: '#' },
+		{ icon: UsersRound, label: 'Community', href: 'https://huggingface.co/thirdeyeai' },
 		{ icon: FileCode2, label: 'Templates', href: '#' },
 		{ icon: History, label: 'History', href: '#' }
 	];

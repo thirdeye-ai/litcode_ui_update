@@ -35,7 +35,11 @@
     }
 
     :global(.prose :not(pre) > code) {
-        color: rgb(230, 230, 230) !important;
+        background-color: rgb(30, 30, 30);
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-size: 0.875em;
+        color: #ffffff !important;
     }
 
     :global(.prose pre) {

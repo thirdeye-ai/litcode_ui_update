@@ -35,11 +35,7 @@
     }
 
     :global(.prose :not(pre) > code) {
-        color: rgb(50, 50, 50) !important;
-    }
-
-    :global(.dark .prose :not(pre) > code) {
-        color: rgb(200, 200, 200) !important;
+        color: rgb(230, 230, 230) !important;
     }
 
     :global(.prose pre) {

@@ -178,7 +178,7 @@
 		<!-- Chat Area with Centered Logo -->
 		<div class="flex-1 overflow-hidden flex flex-col items-center w-full">
 			<div
-				class="h-full w-full max-w-[800px] px-6 md:px-8 pb-20 md:pb-24 overflow-y-auto
+				class="h-full w-full max-w-[800px] px-6 md:px-8 pb-32 md:pb-28 overflow-y-auto
 				scrollbar-thin scrollbar-thumb-scrollbar-thumb scrollbar-track-scrollbar-track
 				hover:scrollbar-thumb-muted"
 			>

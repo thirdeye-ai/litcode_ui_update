@@ -17,7 +17,7 @@
       { "value": "nemotron-mini", "label": "NVIDIA Nemotron 4B (fast)", "enabled": true },
       { "value": "wizard7", "label": "Wizard Vicuna 7B", "enabled": true },
       { "value": "wizard13", "label": "Wizard Vicuna 13B", "enabled": true },
-      { "value": "hermes3", "label": "Hermes 3 8B (general chat)", "enabled": true },
+      { "value": "hermes3", "label": "Hermes 3 8B (general chat)", "enabled": true }
     ]
   }
   

@@ -96,7 +96,8 @@
 				timestamp: new Date()
 			});
 
-			if (data.tab_title) {
+			if (data.tab_title && data.tab_title.trim()) {
+				console.log('Received new tab title from API:', data.tab_title);
 				chatStore.updateTabTitle($chatStore.activeTabId, data.tab_title);
 			}
 		} catch (error) {

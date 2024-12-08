@@ -29,6 +29,21 @@
         background-color: transparent;
         padding: 0;
         border-radius: 0;
-        color: #e5e7eb;
+        color: #ffffff !important;
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+
+    :global(.prose :not(pre) > code) {
+        color: rgb(50, 50, 50) !important;
+    }
+
+    :global(.dark .prose :not(pre) > code) {
+        color: rgb(200, 200, 200) !important;
+    }
+
+    :global(.prose pre) {
+        overflow-x: auto;
+        max-width: 100%;
     }
 </style>

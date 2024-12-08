@@ -87,7 +87,7 @@
                     target.style.height = target.scrollHeight + 'px';
                 }}
                 rows="1"
-                class="w-full bg-muted/50 rounded-lg px-4 py-3 pr-32 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring border border-border resize-none min-h-[44px] max-h-[200px] overflow-y-auto"
+                class="w-full bg-muted/50 rounded-none md:rounded-lg px-2 md:px-4 py-3 pr-32 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring border border-border resize-none min-h-[44px] max-h-[200px] overflow-y-auto"
                 disabled={isLoading}
             ></textarea>
             <div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-2">

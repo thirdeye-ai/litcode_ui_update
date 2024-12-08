@@ -19,7 +19,7 @@ type ChatStore = {
     selectedModel: string;
 };
 
-// Add helper for generating chat names
+// Fix the chat name generation to start from the actual number of tabs
 function generateChatName(tabCount: number): string {
     return `Chat-${String(tabCount + 1).padStart(3, '0')}`;
 }
@@ -42,7 +42,9 @@ function createChatStore() {
         }),
         createNewTab: () => update(store => {
             const newId = `chat-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+            console.log('Current number of tabs:', store.tabs.length);
             const newTitle = generateChatName(store.tabs.length);
+            console.log('Generated title:', newTitle);
             store.tabs.push({
                 id: newId,
                 title: newTitle,
@@ -54,7 +56,10 @@ function createChatStore() {
         setActiveTab: (id: string) => update(store => ({ ...store, activeTabId: id })),
         updateTabTitle: (id: string, title: string) => update(store => {
             const tab = store.tabs.find(t => t.id === id);
-            if (tab) tab.title = title;
+            if (tab) {
+                console.log('Updating tab title from:', tab.title, 'to:', title);
+                tab.title = title;
+            }
             return store;
         }),
         setModel: (model: string) => update(store => ({ ...store, selectedModel: model })),

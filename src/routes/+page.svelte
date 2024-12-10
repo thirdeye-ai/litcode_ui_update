@@ -157,6 +157,17 @@
 	});
 </script>
 
+<svelte:head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-T8DHWKCNVS"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+	
+		gtag('config', 'G-T8DHWKCNVS');
+	</script>
+</svelte:head>
+
 <div class="flex h-screen bg-background">
 	<!-- Left Sidebar - Now visible on mobile when toggled -->
 	<LeftSidebar />

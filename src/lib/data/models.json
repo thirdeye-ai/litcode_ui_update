@@ -2,6 +2,7 @@
     "models": [
       { "value": "qwen2.5-coder-uncensored", "label": "Qwen 2.5 Coder Uncensored", "enabled": true },
       { "value": "smollm2", "label": "SmolLM 2 (fast)", "enabled": true },
+      { "value": "qwen2.5-coder-uncensored", "label": "Qwen2.5 Uncensored", "enabled": true },
       { "value": "litchat superbasic", "label": "llama3.2 (fastest general chat)", "enabled": true },
       { "value": "llama3.1-abliterated", "label": "LLaMA 3.1 Uncensored 8b", "enabled": true },
       { "value": "marco-o1", "label": "marco-o1 (chain of thought reasoning chat)", "enabled": true },
